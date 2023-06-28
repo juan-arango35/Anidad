@@ -1,8 +1,9 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {View, Text, Button, StyleSheet, Dimensions} from 'react-native';
+import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import Carousel from 'react-native-reanimated-carousel';
+import { Button } from 'react-native-paper';
 
 import {Image} from 'react-native';
 
@@ -28,6 +29,7 @@ const Inicio = ({navigation}) => {
         </Text>
         <Carousel
           loop
+          vertical={true}
           width={width}
           height={width / 2}
           autoPlay={true}
@@ -55,7 +57,9 @@ const Inicio = ({navigation}) => {
           <Button
             title="Vamos a Perfil"
             onPress={() => navigation.navigate('Perfil')}
-          />
+            mode='contained'
+            theme={{ colors: { primary: 'blue' } }}
+          >Go to Perfil</Button>
         </View>
       </View>
     </GestureHandlerRootView>

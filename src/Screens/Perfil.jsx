@@ -1,5 +1,6 @@
-import { View, Text, Button , StyleSheet} from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet} from 'react-native'
+import React from 'react'; 
+import { Button } from 'react-native-paper';
 
 
 
@@ -7,7 +8,7 @@ const Perfil = ({navigation}) => {
   return (
     <View style={styles.fondo} >
       <Text style={styles.texto} >Esramos en Perfil</Text>
-      <Button title='go to Pantalla Principal'  onPress={()=>navigation.navigate('Pantalla1')}  />
+      <Button title='go to Pantalla Principal'  mode='contained'    theme={{ colors: { primary: 'blue' } }} onPress={()=>navigation.navigate('Pantalla1')}  > Go to Pantalla Principal </Button>
 
     </View>
   )
