@@ -3,7 +3,7 @@ import * as React from 'react';
 import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import Carousel from 'react-native-reanimated-carousel';
-import { Button } from 'react-native-paper';
+import {Button} from 'react-native-paper';
 
 import {Image} from 'react-native';
 
@@ -23,8 +23,13 @@ const Inicio = ({navigation}) => {
     <GestureHandlerRootView style={{flex: 1}}>
       {/*       caja principal */}
       <View style={styles.fondo}>
-        <Text style={{fontSize: 30, fontWeight: 'bold', color: '#FB1F09', padding:20}}>
-          {' '}
+        <Text
+          style={{
+            fontSize: 30,
+            fontWeight: 'bold',
+            color: '#FB1F09',
+            padding: 20,
+          }}>
           Carrusel de Paisajes
         </Text>
         <Carousel
@@ -52,14 +57,15 @@ const Inicio = ({navigation}) => {
           )}
         />
 
-        <View style={styles.textobajo} >
+        <View style={styles.textobajo}>
           <Text style={styles.texto}>Estamos en Inicio</Text>
           <Button
             title="Vamos a Perfil"
             onPress={() => navigation.navigate('Perfil')}
-            mode='contained'
-            theme={{ colors: { primary: 'blue' } }}
-          >Go to Perfil</Button>
+            mode="contained"
+            theme={{colors: {primary: 'blue'}}}>
+            Go to Perfil
+          </Button>
         </View>
       </View>
     </GestureHandlerRootView>
@@ -84,10 +90,9 @@ const styles = StyleSheet.create({
     padding: 20,
     color: 'blue',
   },
-  textobajo:{
+  textobajo: {
     flex: 0.5,
-    
-    justifyContent: 'flex-end'
 
-  }
+    justifyContent: 'flex-end',
+  },
 });
